@@ -9,36 +9,41 @@ class Stack {
 
   length = ()=> {
     return this.items.length;
-  }
+  };
+  console.log(stack.length());
 
   push = ()=> {
     this.items.push();
-  }
+  };
 
   pop = ()=> {
     if (this.isEmpty()) {
       return null;
     }
     return this.items.pop();
-  }
+  };
+  console.log(stack.pop());
 
   peekLast = ()=> {
     if (this.isEmpty()) {
       return null;
     }
     return this.items[this.items.length - 1];
-  }
+  };
+  console.log(stack.peekLast());
 
   peekFirst = ()=> {
     if (this.isEmpty()) {
       return null;
     }
     return this.items[0];
-  }
+  };
+  console.log(stack.peekFirst());
 
   isEmpty = ()=> {
     return this.items.length === 0;
-  }
+  };
+  console.log(stack.isEmpty());
 
   print = ()=> {
     console.log(this.items);
@@ -50,11 +55,6 @@ stack.push(1);
 stack.push(2);
 stack.push(3);
 stack.print();
-console.log(stack.pop());
-console.log(stack.peekLast());
-console.log(stack.peekFirst());
-console.log(stack.isEmpty());
-console.log(stack.length());
 
 // Implement a queue using an object - isFull, isEmpty, Enqueue, dequeue, size, print
 
@@ -67,15 +67,18 @@ class Queue {
 
   isFull = ()=> {
     return Object.keys(this.items).length === this.rear;
-  }
+  };
+  console.log(queue.isFull());
 
   isEmpty = ()=> {
     return this.front === this.rear;
-  }
+  };
+  console.log(queue.isEmpty());
 
   size = ()=> {
     return Object.keys(this.items).length;
-  }
+  };
+  console.log(queue.size());
 
   print = ()=> {
     console.log(this.items);
@@ -83,7 +86,4 @@ class Queue {
 }
 
 const queue = new Queue();
-console.log(queue.isFull());
-console.log(queue.isEmpty());
-console.log(queue.size());
 queue.print();
