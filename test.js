@@ -11,8 +11,8 @@ class Stack {
     return this.items.length;
   }
 
-  push = (item)=> {
-    this.items.push(item);
+  push = ()=> {
+    this.items.push();
   }
 
   pop = ()=> {
