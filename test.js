@@ -7,12 +7,12 @@ class Stack {
     this.items = [];
   }
 
-  length() {
+  length = ()=> {
     return this.items.length;
   }
 
-  push(element) {
-    this.items.push(element);
+  push = (item)=> {
+    this.items.push(item);
   }
 
   pop = ()=> {
@@ -22,25 +22,25 @@ class Stack {
     return this.items.pop();
   }
 
-  peekLast() {
+  peekLast = ()=> {
     if (this.isEmpty()) {
       return null;
     }
     return this.items[this.items.length - 1];
   }
 
-  peekFirst() {
+  peekFirst = ()=> {
     if (this.isEmpty()) {
       return null;
     }
     return this.items[0];
   }
 
-  isEmpty() {
+  isEmpty = ()=> {
     return this.items.length === 0;
   }
 
-  print() {
+  print = ()=> {
     console.log(this.items);
   }
 }
@@ -65,19 +65,19 @@ class Queue {
     this.rear = 0;
   }
 
-  isFull() {
+  isFull = ()=> {
     return Object.keys(this.items).length === this.rear;
   }
 
-  isEmpty() {
+  isEmpty = ()=> {
     return this.front === this.rear;
   }
 
-  size() {
+  size = ()=> {
     return Object.keys(this.items).length;
   }
 
-  print() {
+  print = ()=> {
     console.log(this.items);
   }
 }
