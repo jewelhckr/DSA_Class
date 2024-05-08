@@ -83,8 +83,7 @@ class Queue {
 }
 
 const queue = new Queue();
-console.log(queue.isFull)
+console.log(queue.isFull());
 console.log(queue.isEmpty());
-console.log(queue.length());
 console.log(queue.size());
 queue.print();
